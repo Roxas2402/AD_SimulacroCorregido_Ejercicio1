@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Animales>
+    <animal>
+        <especie>Perro</especie>
+        <raza>American Stanford</raza>
+        <edad>2</edad>
+        <color>Marrón</color>
+    </animal>
+    <animal>
+        <especie>Gato</especie>
+        <raza>Persa</raza>
+        <edad>3</edad>
+        <color>Azul</color>
+    </animal>
+</Animales>
