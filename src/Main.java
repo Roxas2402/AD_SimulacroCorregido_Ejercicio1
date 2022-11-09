@@ -1,9 +1,6 @@
 import models.Animal;
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+import org.w3c.dom.*;
 import org.xml.sax.SAXException;
-import drivers.AnimalesSaxHandler;
 
 import javax.xml.parsers.*;
 import javax.xml.transform.*;
@@ -56,7 +53,15 @@ public class Main {
                     }
                     break;
                 case 5:
-                    leerXML(animalesList);
+                    try {
+                        leerXML(animalesList);
+                    } catch (ParserConfigurationException e) {
+                        throw new RuntimeException(e);
+                    } catch (SAXException e) {
+                        throw new RuntimeException(e);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                     break;
                 case 6:
                     break;
@@ -64,19 +69,34 @@ public class Main {
         } while (opcion != 6);
     }
 
-    private static void leerXML(ArrayList<Animal> animalesList) throws ParserConfigurationException, SAXException {
-        //SAX
-        System.out.println("Dime el nombre del fichero");
+    private static void leerXML(ArrayList<Animal> animalesList) throws ParserConfigurationException, SAXException, IOException {
+        //DOM
         File file = new File("archivo.xml");
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder db = dbf.newDocumentBuilder();
+        Document document = db.parse(file);
+        document.getDocumentElement().normalize();
+        System.out.println("Raíz del documento: " + document.getDocumentElement().getNodeName());
 
-        SAXParserFactory saxPF = SAXParserFactory.newInstance();
-        SAXParser saxP = saxPF.newSAXParser();
-        AnimalesSAXHandler handler = new AnimalesSAXHandler(animalesList);
-        saxP.parse(file, handler);
+        NodeList nodos = document.getElementsByTagName("animal");
 
-        for (Alumno alumno : alumnosList) {
-            System.out.println(alumno);
+        for (int i = 0; i < nodos.getLength(); i++) {
+            Node nodo = nodos.item(i);
+            System.out.println("Elemento: " + nodo.getNodeName());
+            if (nodo.getNodeType() == Node.ELEMENT_NODE) {
+                Element animal = (Element) nodo;
+                String especie = animal.getElementsByTagName("especie").item(0).getTextContent();
+                String raza = animal.getElementsByTagName("raza").item(0).getTextContent();
+                String color = animal.getElementsByTagName("color").item(0).getTextContent();
+                int edad = Integer.parseInt(animal.getElementsByTagName("edad").item(0).getTextContent());
+
+                Animal animal1 = new Animal(especie, raza, edad, color);
+                System.out.println(animal1);
+
+                //System.out.println(animal);
+            }
         }
+
     }
 
     private static void escribirXML(Scanner scanner, ArrayList<Animal> animalesList) throws ParserConfigurationException, TransformerException {

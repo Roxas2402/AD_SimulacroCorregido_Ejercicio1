@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa1077d4-bacc-4cd7-b327-b35af493863d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/archivo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binario.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/drivers/AnimalesSaxHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Animal.java" afterDir="false" />
+    <list default="true" id="fa1077d4-bacc-4cd7-b327-b35af493863d" name="Changes" comment="aa">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drivers/AnimalesSaxHandler.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +36,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/jerop/OneDrive - CIEEP Progresa/2022-2023/Acceso a Datos/Primer Trimestre/Simulacro_Ejercicio1"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -51,8 +52,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667918303520</updated>
-      <workItem from="1667918307010" duration="7896000" />
+      <workItem from="1667918307010" duration="7960000" />
+      <workItem from="1667993052302" duration="2475000" />
     </task>
+    <task id="LOCAL-00001" summary="aa">
+      <created>1667926811190</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667926811190</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -71,5 +81,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="aa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aa" />
   </component>
 </project>
