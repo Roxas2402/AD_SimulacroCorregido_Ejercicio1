@@ -76,13 +76,11 @@ public class Main {
         DocumentBuilder db = dbf.newDocumentBuilder();
         Document document = db.parse(file);
         document.getDocumentElement().normalize();
-        System.out.println("Raíz del documento: " + document.getDocumentElement().getNodeName());
 
         NodeList nodos = document.getElementsByTagName("animal");
 
         for (int i = 0; i < nodos.getLength(); i++) {
             Node nodo = nodos.item(i);
-            System.out.println("Elemento: " + nodo.getNodeName());
             if (nodo.getNodeType() == Node.ELEMENT_NODE) {
                 Element animal = (Element) nodo;
                 String especie = animal.getElementsByTagName("especie").item(0).getTextContent();
@@ -93,7 +91,10 @@ public class Main {
                 Animal animal1 = new Animal(especie, raza, edad, color);
                 System.out.println(animal1);
 
-                //System.out.println(animal);
+                for (Animal a: animalesList) {
+                    System.out.println(a.toString());
+                }
+
             }
         }
 

@@ -4,12 +4,12 @@
         <especie>Perro</especie>
         <raza>American Stanford</raza>
         <edad>2</edad>
-        <color>Marrón</color>
+        <color>Gris</color>
     </animal>
     <animal>
         <especie>Gato</especie>
         <raza>Persa</raza>
         <edad>3</edad>
-        <color>Azul</color>
+        <color>Marrón</color>
     </animal>
 </Animales>
