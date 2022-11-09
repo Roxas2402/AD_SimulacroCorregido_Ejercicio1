@@ -206,7 +206,7 @@ public class Main {
                 opcion = scanner.nextInt();
             } catch (InputMismatchException exception) {
                 opcion = 0;
-                System.out.println("¿Tú eres tonto?");
+                System.out.println("Error");
                 scanner.nextLine();
             }
         } while (opcion < 1 || opcion > 6);
