@@ -92,7 +92,7 @@ public class Main {
                 Animal animal1 = new Animal(especie, raza, edad, color);
                 System.out.println(animal1);
 
-                for (Animal a: animalesList) {
+                for (Animal a : animalesList) {
                     System.out.println(a.toString());
                 }
 
